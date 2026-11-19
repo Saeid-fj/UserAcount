@@ -1,0 +1,402 @@
+/* Reset */
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+/* Root */
+
+:root {
+  --color-primary: #cc312d;
+  --secondary-light: #ffffff;
+  --secondary-dark: #f7f7f7;
+  --color-btn: #2f0d0c;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  color: var(--color-body);
+  font-size: 1.4rem;
+}
+
+h1,
+h2,
+h3 {
+  color: var(-color-heading);
+  font-weight: 400;
+}
+
+h1 {
+  font-size: 2.5rem;
+}
+
+h2 {
+  font-size: 2.2rem;
+}
+
+@media screen and (min-width: 1024px) {
+  body {
+    font-size: 1.8rem;
+  }
+  h1 {
+    font-size: 4rem;
+  }
+  h2 {
+    font-size: 3.5rem;
+  }
+}
+
+/* button */
+.btn {
+  outline: 0;
+  border: 0;
+  padding: 1rem 2rem;
+  margin: 1rem 0;
+  border-radius: 8px;
+  text-align: center;
+  white-space: nowrap;
+  font-size: 1.5rem;
+}
+.btn--primary {
+  background-color: var(--color-primary);
+  color: var(--color-white);
+}
+.btn--secondary {
+  background-color: var(--secondary-dark);
+  color: var(--color-white);
+}
+.btn--block {
+  width: 100%;
+}
+
+@media screen and(min-width: 1024) {
+  .btn {
+    font-size: 1.6rem;
+  }
+  .btn--block {
+    font-size: 2rem;
+  }
+}
+
+/* badge */
+
+.badge {
+  border-radius: 20px;
+  font-size: 1.4rem;
+  padding: 0.5rem 1rem;
+  margin: 0.5rem;
+  font-size: 1.5rem;
+}
+
+.badge--primary {
+  background-color: var(--color-primary);
+  color: var(--color-white);
+}
+
+.badge--secondary {
+  background-color: var(--color-white);
+  border: solid var(--color-primary);
+  color: var(--color-primary);
+}
+
+@media screen and(min-width: 1024px) {
+  .badge {
+    font-size: 2rem;
+  }
+}
+
+/* section */
+.user-account {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  padding: 3rem 3rem;
+  gap: 2rem;
+}
+
+.user-sidbar {
+  background-color: var(--secondary-dark);
+  padding: 1.5rem;
+  border-radius: 15px;
+}
+
+@media screen and (min-width: 1024px) {
+  .user-account {
+    grid-template-columns: 310px minmax(0, 1fr);
+  }
+}
+
+/* Sidebar */
+
+.user-sidbar__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.user-sidbar__header .user-info {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+.hr-header {
+  border: 1px solid #e6e6e6;
+  margin-bottom: 2rem;
+  margin-top: 1rem;
+}
+
+.user-sidbar__body {
+  padding: 1rem;
+}
+
+.menue_item {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 3rem;
+  padding: 1rem 1rem;
+}
+
+.sidbar-menue {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.item1 {
+  background-color: var(--color-btn);
+  color: var(--secondary-light);
+  border-radius: 20px;
+  padding: 2rem 1rem;
+}
+
+.item3 {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.item3-badge {
+  margin-right: auto;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 28px;
+  height: 28px;
+
+  background-color: var(--color-primary);
+  color: var(--secondary-light);
+
+  border-radius: 50%;
+
+  font-family: "iransans";
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.item5 {
+  margin-top: 6rem;
+}
+
+/* Body */
+
+.position {
+  display: flex;
+  gap: 16px;
+  padding-bottom: 8px;
+  width: 100%;
+  min-width: 0;
+  box-sizing: border-box;
+}
+
+.position-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 16px;
+  border: 1px solid #e5e5e5;
+  border-radius: 12px;
+  width: 100%;
+
+  flex: 1 1 0;
+  min-width: 0;
+  box-sizing: border-box;
+
+  font-size: 1.5rem;
+}
+
+@media (max-width: 1023px) {
+  .position {
+    overflow-x: auto;
+    overflow-y: hidden;
+
+    flex-wrap: nowrap;
+
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: thin;
+  }
+
+  .position-item {
+    flex: 0 0 220px;
+    min-width: 220px;
+  }
+}
+
+.position-item__text {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.order {
+  border: solid 2px var(--secondary-dark);
+  border-radius: 15px;
+  padding: 2rem;
+  margin-top: 2rem;
+  box-shadow: 1px 1px 5px var(--secondary-dark);
+}
+
+/* Order */
+
+.order-status {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  background-color: #ecf4fe;
+  width: 143px;
+  height: 44px;
+  border-radius: 20px;
+  padding: 1rem;
+  font-size: 1.2rem;
+  color: #2e7af1;
+}
+
+.order-info {
+  margin-top: 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+@media screen and (max-width: 1024px) {
+  .order-info {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+  }
+  .order-info__text {
+    flex-direction: column;
+  }
+  .order-info__price {
+    align-self: self-end;
+  }
+}
+
+.order-info__text {
+  display: flex;
+  gap: 2.5rem;
+}
+
+.order-info__price {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.order-hr {
+  border: 1px solid #e6e6e6;
+  margin: 1rem 0rem;
+}
+
+.order-detail {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--secondary-dark);
+  border-radius: 15px;
+  padding: 1rem 2rem;
+}
+
+.order-detail__img {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin: 0.5rem;
+}
+
+.order__item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background-color: white;
+
+  width: 72px;
+  height: 72px;
+
+  padding: 1rem;
+  border-radius: 15px;
+
+  box-sizing: border-box;
+  flex-shrink: 0;
+
+  position: relative;
+}
+
+.order__badge {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 25px;
+  height: 25px;
+
+  background-color: var(--secondary-dark);
+  color: var(--color-btn);
+
+  border: 1px solid var(--color-btn);
+  border-radius: 50%;
+
+  font-family: "iransans";
+  font-size: 12px;
+  font-weight: 600;
+
+  position: absolute;
+
+  /* موقعیت عدد نسبت به مربع سفید */
+  bottom: -6px;
+  left: -6px;
+
+  z-index: 2;
+}
+
+.order-detail__btn {
+  color: #cc312d;
+  display: flex;
+  gap: 0.5rem;
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+
+@media screen and (max-width: 767px) {
+  .order__badge {
+    display: none;
+  }
+
+  .order__item {
+    margin-left: -3rem;
+    border: 1px solid var(--secondary-dark);
+  }
+}
